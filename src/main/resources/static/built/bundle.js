@@ -41436,7 +41436,7 @@ var NuevoIntegrantePage = function NuevoIntegrantePage() {
     type: "submit",
     value: "Nuevo Integrante"
   })), /*#__PURE__*/React.createElement(Link, {
-    to: "/"
+    to: "/ver-banda/:id"
   }, "Volver"));
 };
 module.exports = NuevoIntegrantePage;
