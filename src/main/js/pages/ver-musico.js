@@ -8,11 +8,12 @@ const VerMusicoPage = () => {
     let { id } = useParams();
     const [musico, setMusico] = useState({});
 
+    useEffect(()=>{
     client({
         method: 'GET',
         path: '/api/musicos/' + id
     }).done(response=>setMusico(response.entity))
-
+    },[])
 
     return (
         <>

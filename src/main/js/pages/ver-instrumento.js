@@ -8,11 +8,12 @@ const VerInstrumentoPage = () => {
     let { id } = useParams();
     const [instrumento, setInstrumento] = useState({});
 
+    useEffect(()=>{
     client({
         method: 'GET',
         path: '/api/instrumentos/' + id
     }).done(response=>setInstrumento(response.entity))
-
+    },[])
 
     return (
         <>

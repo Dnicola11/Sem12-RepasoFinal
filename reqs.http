@@ -13,6 +13,10 @@ POST {{server}}/api/musicos
 Content-Type: application/json
 
 {"nombre": "Joaquín"}
+###
+GET {{server}}/api/bandas
+###
+GET {{server}}/api/integrantes
 
 
 
