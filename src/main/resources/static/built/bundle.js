@@ -41122,18 +41122,14 @@ var NuevoInstrumentoPage = function NuevoInstrumentoPage() {
     onChange: function onChange(eNombre) {
       return setNombre(eNombre.target.value);
     }
-  }), " ", /*#__PURE__*/React.createElement("br", null)), /*#__PURE__*/React.createElement("form", {
-    onSubmit: handleSubmit
-  }, /*#__PURE__*/React.createElement("label", null, "Categoria"), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
+  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Categoria"), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "categoria",
     name: "categoria",
     onChange: function onChange(eCategoria) {
       return setCategoria(eCategoria.target.value);
     }
-  }), " ", /*#__PURE__*/React.createElement("br", null)), /*#__PURE__*/React.createElement("form", {
-    onSubmit: handleSubmit
-  }, /*#__PURE__*/React.createElement("label", null, "Descripcion"), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
+  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Descripcion"), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "descripcion",
     name: "descripcion",
