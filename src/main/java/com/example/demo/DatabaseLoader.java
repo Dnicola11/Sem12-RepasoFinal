@@ -37,7 +37,8 @@ public class DatabaseLoader implements CommandLineRunner {
 		this.repositoryI.save(iGuitarraElectrica);
 		this.repositoryI.save(new Instrumento("Batería","Percusión","."));
 
-		this.repositoryM.save(new Musico("Daniel F"));
+		Musico mDaniel = new Musico("Daniel F");
+		this.repositoryM.save(mDaniel);
 		Musico mFreddy = new Musico("Freddy");
 		this.repositoryM.save(mFreddy);
 		Musico mBrian = new Musico("Brian");
