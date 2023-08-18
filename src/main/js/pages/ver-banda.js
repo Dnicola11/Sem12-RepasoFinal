@@ -60,7 +60,7 @@ const VerBandaPage = () => {
             </table>
 
             <hr />
-            <Link to={'/ver-banda/${id}/nuevo-integrante'}>Nuevo Integrante</Link> |
+            <Link to={`/ver-banda/${id}/nuevo-integrante`}>Nuevo Integrante</Link> |
             <Link to="/">Volver</Link>
         </>
     )

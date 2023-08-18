@@ -19,7 +19,6 @@ public class DatabaseLoader implements CommandLineRunner {
 		BandaRepository repositoryB,
 		IntegranteRepository repositoryN
 		) {
-
 		this.repositoryI = repositoryI;
 		this.repositoryM = repositoryM;
 		this.repositoryB = repositoryB;
@@ -34,7 +33,7 @@ public class DatabaseLoader implements CommandLineRunner {
 		this.repositoryI.save(new Instrumento("Melódica","Viento","teclado pequeño de 2 octavas, sonorizado por soplido"));
 		Instrumento iVoz = new Instrumento("Voz","Viento",".");
 		this.repositoryI.save(iVoz);
-		Instrumento iGuitarraElectrica =new Instrumento("Guitarra Electrica","Electrónico", ".");
+		Instrumento iGuitarraElectrica = new Instrumento("Guitarra Electrica","Electrónico", ".");
 		this.repositoryI.save(iGuitarraElectrica);
 		this.repositoryI.save(new Instrumento("Batería","Percusión","."));
 
@@ -49,6 +48,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
 		this.repositoryN.save(new Integrante(bQueen, mFreddy, iVoz));
 		this.repositoryN.save(new Integrante(bQueen, mBrian, iGuitarraElectrica));
+
 
 	}
 }

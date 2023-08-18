@@ -29,7 +29,8 @@
         "watch": "webpack --watch -d --output ./target/classes/static/built/bundle.js",
         "wp": "npm i && node --openssl-legacy-provider ./node_modules/webpack-cli/bin/cli.js",
         "idat": "echo IDAT",
-        "gg": "git add . && git commit -m hola && git pull && git push"
+        "gg": "git add . && git commit -m hola && git pull && git push",
+        "hm": "echo HolaMundo"
     },
     "devDependencies": {
         "@babel/core": "^7.1.0",

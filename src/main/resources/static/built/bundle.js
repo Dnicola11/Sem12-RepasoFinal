@@ -40840,10 +40840,10 @@ var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react
   createBrowserRouter = _require.createBrowserRouter,
   RouterProvider = _require.RouterProvider;
 var HomePage = __webpack_require__(/*! ./pages/home */ "./src/main/js/pages/home.js");
+var NuevoMusicoPage = __webpack_require__(/*! ./pages/nuevo-musico */ "./src/main/js/pages/nuevo-musico.js");
 var VerInstrumentoPage = __webpack_require__(/*! ./pages/ver-instrumento */ "./src/main/js/pages/ver-instrumento.js");
 var NuevoInstrumentoPage = __webpack_require__(/*! ./pages/nuevo-instrumento */ "./src/main/js/pages/nuevo-instrumento.js");
 var VerMusicoPage = __webpack_require__(/*! ./pages/ver-musico */ "./src/main/js/pages/ver-musico.js");
-var NuevoMusicoPage = __webpack_require__(/*! ./pages/nuevo-musico */ "./src/main/js/pages/nuevo-musico.js");
 var EditarInstrumentoPage = __webpack_require__(/*! ./pages/editar-instrumento */ "./src/main/js/pages/editar-instrumento.js");
 var VerBandaPage = __webpack_require__(/*! ./pages/ver-banda */ "./src/main/js/pages/ver-banda.js");
 var NuevoIntegrantePage = __webpack_require__(/*! ./pages/nuevo-integrante */ "./src/main/js/pages/nuevo-integrante.js");
@@ -40857,14 +40857,14 @@ var router = createBrowserRouter([{
   path: '/nuevo-instrumento',
   element: /*#__PURE__*/React.createElement(NuevoInstrumentoPage, null)
 }, {
-  path: '/editar-instrumento/:id',
-  element: /*#__PURE__*/React.createElement(EditarInstrumentoPage, null)
-}, {
   path: '/ver-musico/:id',
   element: /*#__PURE__*/React.createElement(VerMusicoPage, null)
 }, {
   path: '/nuevo-musico',
   element: /*#__PURE__*/React.createElement(NuevoMusicoPage, null)
+}, {
+  path: '/editar-instrumento/:id',
+  element: /*#__PURE__*/React.createElement(EditarInstrumentoPage, null)
 }, {
   path: '/ver-banda/:id',
   element: /*#__PURE__*/React.createElement(VerBandaPage, null)
@@ -40964,7 +40964,7 @@ var EditarInstrumentoPage = function EditarInstrumentoPage() {
   };
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Editar Instrumento"), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
-  }, /*#__PURE__*/React.createElement("label", null, "Nombre"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/React.createElement("label", null, "Nombre"), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "nombre",
     name: "nombre",
@@ -40974,7 +40974,7 @@ var EditarInstrumentoPage = function EditarInstrumentoPage() {
         nombre: e.target.value
       }));
     }
-  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Categoria"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
+  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Categoria"), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "categoria",
     name: "categoria",
@@ -40984,7 +40984,7 @@ var EditarInstrumentoPage = function EditarInstrumentoPage() {
         categoria: e.target.value
       }));
     }
-  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Descripcion"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
+  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Descripcion"), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "descripcion",
     name: "descripcion",
@@ -40997,9 +40997,7 @@ var EditarInstrumentoPage = function EditarInstrumentoPage() {
   }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
     value: "Editar Instrumento"
-  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
-    to: "/"
-  }, "Volver")));
+  })));
 };
 module.exports = EditarInstrumentoPage;
 
@@ -41305,22 +41303,22 @@ var NuevoInstrumentoPage = function NuevoInstrumentoPage() {
     type: "text",
     id: "nombre",
     name: "nombre",
-    onChange: function onChange(eNombre) {
-      return setNombre(eNombre.target.value);
+    onChange: function onChange(e) {
+      return setNombre(e.target.value);
     }
-  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Categoria"), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
+  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Categor\xEDa"), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "categoria",
     name: "categoria",
-    onChange: function onChange(eCategoria) {
-      return setCategoria(eCategoria.target.value);
+    onChange: function onChange(e) {
+      return setCategoria(e.target.value);
     }
-  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Descripcion"), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
+  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Descripci\xF3n"), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "descripcion",
     name: "descripcion",
-    onChange: function onChange(eDescripcion) {
-      return setDescripcion(eDescripcion.target.value);
+    onChange: function onChange(e) {
+      return setDescripcion(e.target.value);
     }
   }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
@@ -41436,7 +41434,7 @@ var NuevoIntegrantePage = function NuevoIntegrantePage() {
     type: "submit",
     value: "Nuevo Integrante"
   })), /*#__PURE__*/React.createElement(Link, {
-    to: "/ver-banda"
+    to: "/"
   }, "Volver"));
 };
 module.exports = NuevoIntegrantePage;
@@ -41557,7 +41555,7 @@ var VerBandaPage = function VerBandaPage() {
       key: integrante.ID
     }, /*#__PURE__*/React.createElement("td", null, integrante.MUSICO), /*#__PURE__*/React.createElement("td", null, integrante.INSTRUMENTO));
   }))), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
-    to: '/ver-banda/${id}/nuevo-integrante'
+    to: "/ver-banda/".concat(id, "/nuevo-integrante")
   }, "Nuevo Integrante"), " |", /*#__PURE__*/React.createElement(Link, {
     to: "/"
   }, "Volver"));

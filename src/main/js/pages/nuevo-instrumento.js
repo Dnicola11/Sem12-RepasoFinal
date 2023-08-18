@@ -27,11 +27,11 @@ const NuevoInstrumentoPage = () => {
         <h1>Nuevo Instrumento</h1>
         <form onSubmit={handleSubmit}>
             <label>Nombre</label> <br />
-            <input type="text" id='nombre' name='nombre' onChange={eNombre=>setNombre(eNombre.target.value)} /> <br />
-            <label>Categoria</label> <br />
-            <input type="text" id='categoria' name='categoria' onChange={eCategoria=>setCategoria(eCategoria.target.value)} /> <br />
-            <label>Descripcion</label> <br />
-            <input type="text" id='descripcion' name='descripcion' onChange={eDescripcion=>setDescripcion(eDescripcion.target.value)} /> <br />
+            <input type="text" id='nombre' name='nombre' onChange={e=>setNombre(e.target.value)} /> <br />
+            <label>Categoría</label> <br />
+            <input type="text" id='categoria' name='categoria' onChange={e=>setCategoria(e.target.value)} /> <br />
+            <label>Descripción</label> <br />
+            <input type="text" id='descripcion' name='descripcion' onChange={e=>setDescripcion(e.target.value)} /> <br />
             <input type="submit" value="Nuevo Instrumento" />
         </form>
         <Link to="/">Volver</Link>
