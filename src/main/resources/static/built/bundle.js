@@ -40964,7 +40964,7 @@ var EditarInstrumentoPage = function EditarInstrumentoPage() {
   };
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Editar Instrumento"), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
-  }, /*#__PURE__*/React.createElement("label", null, "Nombre"), /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/React.createElement("label", null, "Nombre"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "nombre",
     name: "nombre",
@@ -40974,7 +40974,7 @@ var EditarInstrumentoPage = function EditarInstrumentoPage() {
         nombre: e.target.value
       }));
     }
-  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Categoria"), /*#__PURE__*/React.createElement("input", {
+  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Categoria"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "categoria",
     name: "categoria",
@@ -40984,7 +40984,7 @@ var EditarInstrumentoPage = function EditarInstrumentoPage() {
         categoria: e.target.value
       }));
     }
-  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Descripcion"), /*#__PURE__*/React.createElement("input", {
+  }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Descripcion"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "descripcion",
     name: "descripcion",
@@ -40997,7 +40997,9 @@ var EditarInstrumentoPage = function EditarInstrumentoPage() {
   }), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
     value: "Editar Instrumento"
-  })));
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
+    to: "/"
+  }, "Volver")));
 };
 module.exports = EditarInstrumentoPage;
 
