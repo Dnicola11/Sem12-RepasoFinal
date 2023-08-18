@@ -37,7 +37,8 @@ const EditarInstrumentoPage = ()=>{
                 <label>Descripcion</label><br />
                 <input type="text" id="descripcion" name="descripcion" value={instrumento.descripcion} onChange={(e)=>setInstrumento({...instrumento, descripcion: e.target.value})}  /> <br/>
                 
-                <input type="submit" value="Editar Instrumento" />
+                <input type="submit" value="Editar Instrumento" /><br />
+                <Link to="/">Volver</Link>
             </form>
 
         </>

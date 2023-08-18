@@ -1,6 +1,6 @@
 const React = require('react');
 const { Link, useParams } = require('react-router-dom');
-const {useState} = require('react');
+const { useState, useEffect } = require('react');
 const client = require('../client');
 
 const VerBandaPage = () => {
@@ -9,38 +9,43 @@ const VerBandaPage = () => {
     const [banda, setBanda] = useState({});
     const [integrantes, setIntegrantes] = useState([]);
 
-    useEffect(()=>{
-    client({
-        method: 'GET',
-        path: '/api/bandas/' + id
-    }).done(response=>setBanda(response.entity))
-    client({
-        method: 'GET',
-        path: '/api/bandas/' + id + '/formacion'
-    }).done(response=>setIntegrantes(response.entity))
-    },[])
+    useEffect(() => {
+        client({
+            method: 'GET',
+            path: '/api/bandas/' + id
+        }).done(response => setBanda(response.entity))
+        client({
+            method: 'GET',
+            path: '/api/bandas/' + id + '/formacion'
+        }).done(response => setIntegrantes(response.entity))
+    }, [])
+
 
     return (
         <>
             <h1>Ver Banda</h1>
-            <hr/>
+            <hr />
+
             <table border="1">
-                <tr>
-                    <th>Nombre</th>
-                    <td>{banda.nombre}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>{banda.nombre}</td>
+                    </tr>
+                </tbody>
             </table>
-            <hr/>
-            
-            <h2>Formacion</h2>
+            <hr />
+
+            <h2>Formación</h2>
             <table border="1">
                 <thead>
-                <tr>
-                    <th>Musico</th>
-                    <td>Instrumento</td>
-                </tr>
+                    <tr>
+                        <th>Musico</th>
+                        <th>Instrumento</th>
+                    </tr>
                 </thead>
                 <tbody>
+
                     {integrantes.map(integrante=>{
                         return(
                             <tr key={integrante.ID}>
@@ -49,11 +54,13 @@ const VerBandaPage = () => {
                             </tr>
                         )
                     })}
+
                 </tbody>
+
             </table>
 
             <hr />
-            <Link to={'/ver-banda/${id}/nuevo-integrante'}>Nuevo Integrante</Link> | 
+            <Link to={'/ver-banda/${id}/nuevo-integrante'}>Nuevo Integrante</Link> |
             <Link to="/">Volver</Link>
         </>
     )

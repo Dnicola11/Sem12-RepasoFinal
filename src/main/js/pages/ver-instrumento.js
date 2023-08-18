@@ -1,6 +1,6 @@
 const React = require('react');
 const { Link, useParams } = require('react-router-dom');
-const {useState} = require('react');
+const {useState, useEffect} = require('react');
 const client = require('../client');
 
 const VerInstrumentoPage = () => {
@@ -9,11 +9,13 @@ const VerInstrumentoPage = () => {
     const [instrumento, setInstrumento] = useState({});
 
     useEffect(()=>{
-    client({
-        method: 'GET',
-        path: '/api/instrumentos/' + id
-    }).done(response=>setInstrumento(response.entity))
-    },[])
+        client({
+            method: 'GET',
+            path: '/api/instrumentos/' + id
+        }).done(response=>setInstrumento(response.entity))
+    }, [])
+
+
 
     return (
         <>
